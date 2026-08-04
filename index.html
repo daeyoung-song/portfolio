@@ -571,12 +571,19 @@
         <h2>Projects</h2>
         <div class="grid-2">
           <article class="card">
-            <h3>난소암 조기 진단 CDSS</h3>
-            <p class="card-meta">바이오메디컬 AI · 임상 데이터</p>
+            <h3>난소암 조기 진단 CDSS (OVA-LINK)</h3>
+            <p class="card-meta">2026.05 — 2026.07 · 건양대학교병원 바이오메디컬 AI 과정 · Team 3inyong</p>
+            <p>
+              1차 의료기관의 초음파·혈액검사 데이터만으로 난소암 위험도를 자동 판정해 3차 기관
+              연계를 돕는 AI 기반 임상의사결정지원시스템. 혈액검사 기반 위험도 예측 모델(ML) 개발을
+              담당했습니다.
+            </p>
             <ul>
-              <li>MIMIC-IV 비정형 텍스트에서 임상 지표 추출 및 TyG Index 스코어링·RDB 구축</li>
-              <li>PSM으로 기저질환 교란 변수 통제, TyG–난소암 상관 통계 검증 (p&lt;0.05)</li>
-              <li>ML 기반 조기 진단 모델 및 대시보드형 CDSS 웹 서비스 구현</li>
+              <li>MIMIC-IV 임상 데이터 파이프라인 구축, TyG Index를 새 바이오마커로 발굴해 CA-125 단일 마커의 위양성·위음성 한계 보완</li>
+              <li>PSM 1:1 매칭으로 10개 기저질환 교란 변수 통제(코호트 1,958명 → 820명), Mann-Whitney U 검정으로 TyG–난소암 상관관계 통계 검증 (p=0.0223)</li>
+              <li>XGBoost 특성 21개 → 11개 선별, 부트스트랩 1,000회 검증으로 TyG 추가 효과의 통계적 유의성 확인 (p=0.019)</li>
+              <li>PR-AUC 0.9784(TyG 포함, Baseline 대비 1.05%p↑) · AUC 97.02% · Precision 96.3% · Accuracy 92.6% (Train 99.3% / Validation 96.5%)</li>
+              <li>초음파 AI(탐지 Recall 95%, 분류 AUC 95.53%)와 결합해 RMI 자동 계산·위험도(저/중/고) 판정 웹 시스템 완성</li>
             </ul>
           </article>
           <article class="card">
@@ -606,6 +613,8 @@
           <span class="skill">SQL</span>
           <span class="skill">Machine Learning</span>
           <span class="skill">Deep Learning</span>
+          <span class="skill">XGBoost</span>
+          <span class="skill">PostgreSQL · FastAPI</span>
           <span class="skill">DICOM · NIfTI · Pathology</span>
           <span class="skill">SOP · 품질 가이드라인</span>
         </div>
